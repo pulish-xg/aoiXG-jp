@@ -3,6 +3,10 @@
 	list-style:none;
 }
 
+#tabs ul {
+	margin-block: 0;
+}
+
 /* Don't forget to include a CSS reset file otherwise it might look a little bit strange*/
 a:active,a:focus {
 	outline: expression(hideFocus='true');
@@ -17,38 +21,44 @@ p {
 	margin: 0 auto;
 	margin-top: 100px;
 }
-#tabs,#tabs2,#tabs3,#tabs4,#tabs5 {
-	width: 500px;
+#tabs,#tabs2,#tabs3,#tabs4,#tabs5,#tabs6 {
+	width: 100%;
 	margin: 0 auto;
-	margin-bottom: 40px;
 }
 
-#tabs li,#tabs2 li,#tabs3 li,#tabs4 li,#tabs5 li {
+#tabs li,#tabs2 li,#tabs3 li,#tabs4 li,#tabs5 li,#tabs6 li {
 	float: left;
 	margin-right: 2px;
+	height: 28px;
 }
 
-#tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a {
+#tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a,#tabs6 li a {
 	display: block;
-	padding: 17px 30px;
-	background: #544f6b;
+	padding: 4px 8px;
+	background: #cccccc;
+	font-size: 14px;
 	text-decoration: none;
-	color: #8478B3;
+	color: #333333;
+	min-width: 96px;
 }
 
-#tabs li a:hover,#tabs2 li a:hover,#tabs3 li a:hover,#tabs4 li a:hover,#tabs5 li a:hover {
-	background: rgb(78, 74, 99);
+#tabs li a:hover,#tabs2 li a:hover,#tabs3 li a:hover,#tabs4 li a:hover,#tabs5 li a:hover,#tabs6 li a:hover {
+	background: #666666;
+	color: #ffffff;
 }
 
 #tabs_container {
-	padding: 40px;
+	padding: 0;
+	width: 100%;
+	height: calc(100% - 28px);
 	overflow: hidden;
 	position: relative;
 	background: white;
 }
 
 #tabs_container div {
-	margin-right: 40px;
+	/* margin-right: 40px; */
+	height: 100%;
 }
 
 .transition {
@@ -201,8 +211,8 @@ p {
 }
 
 .tabulous_active {
-	background: white !important;
-	color: #655c89 !important;
+	background: #6666ff !important;
+	color: #ffffff!important;
 }
 
 .tabulousclear {
