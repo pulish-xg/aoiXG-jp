@@ -1,3 +1,8 @@
+/* from old reset.css */
+#tabs li {
+	list-style:none;
+}
+
 /* Don't forget to include a CSS reset file otherwise it might look a little bit strange*/
 a:active,a:focus {
 	outline: expression(hideFocus='true');
