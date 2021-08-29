@@ -5,17 +5,61 @@
     <meta charset="UTF-8">
     <title>日本語で遊ぶ青いクロゲ</title>
 
+    <link rel='stylesheet' type='text/css' href='lib/reset.css'>
+    <link rel='stylesheet' type='text/css' href='lib/tabulous.css'>
     <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            /* overflow: hidden; */
+        }
+
+        #tabs {
+            width: 100%;
+            height: 100%;
+        }
 
     </style>
 </head>
 
 <body>
-
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1" title="">Tab 1</a></li>
+            <li><a href="#tabs-2" title="">Tab 2</a></li>
+            <li><a href="#tabs-3" title="">Tab 3</a></li>
+            <li><a href="#tabs-4" title="">Tab 4</a></li>
+            <li><a href="#tabs-5" title="">Tab 5</a></li>
+            <li><a href="#tabs-6" title="">Tab 6</a></li>
+        </ul>
+        <div id="tabs_container">
+            <div id="tabs-1">
+                こんてんつ１
+            </div>
+            <div id="tabs-2">
+                こんてんつ２
+            </div>
+            <div id="tabs-3">
+                こんてんつ３
+            </div>
+            <div id="tabs-4">
+                こんてんつ４
+            </div>
+            <div id="tabs-5">
+                こんてんつ５
+            </div>
+            <div id="tabs-6">
+                こんてんつ６
+            </div>
+        </div>
+    </div>
 
     <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="lib/tabulous.js"></script>
     <script>
         $('#tabs').tabulous({ effect: 'slideLeft' });
+
+
 
     </script>
 </body>
