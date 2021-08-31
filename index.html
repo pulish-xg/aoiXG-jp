@@ -65,7 +65,23 @@
 
         $('#tabs').tabulous({ effect: 'slideLeft' });
 
+        // Load BIG-5 => UTF16 map
+        const big5_u16LE = new Uint8Array(0x80 * 0xc0 * 2);
+        const fd = fs.openSync('lib/CP950EX_UTF16.map')
+        fs.readvSync(fd, [big5_u16LE]);
+
+        const $boxChatLog = [$('<div>'), $('#tabs-1'), $('#tabs-2'), $('#tabs-3')];
+
+        $(async () => {
+            try {
+                await StartLogWatching(config.BlueCG.user);
+            }
+            catch (err) {
+                console.warn(err);
+            }
+        })
     </script>
+    <script src="./LogWatcher.js"></script>
 </body>
 
 </html>
