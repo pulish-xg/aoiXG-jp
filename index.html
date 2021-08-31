@@ -66,6 +66,11 @@
         const fs = require('fs');
         const gui = require('nw.gui');
 
+        if (fs.existsSync("./data/config.json") == false) {
+            fs.copyFileSync('"./lib/config-sample.json"', "./data/config.json")
+        }
+        const config = JSON.parse(fs.readFileSync("./data/config.json"));
+        console.debug(config);
 
 
         $('#tabs').tabulous({ effect: 'slideLeft' });
