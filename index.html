@@ -19,6 +19,14 @@
             width: 100%;
             height: 100%;
         }
+
+	div.chatlog>div:nth-child(2n) {
+		background-color: #f0f0f0;
+	}
+	div.chatlog>div:nth-child(2n+1) {
+		background-color: #f8fff8;
+	}
+
     </style>
 </head>
 
@@ -33,14 +41,11 @@
             <li><a href="#tabs-6" title="">Tab 6</a></li>
         </ul>
         <div id="tabs_container">
-            <div id="tabs-1">
-                こんてんつ１
+            <div id="tabs-1" class="chatlog">
             </div>
-            <div id="tabs-2">
-                こんてんつ２
+            <div id="tabs-2" class="chatlog">
             </div>
-            <div id="tabs-3">
-                こんてんつ３
+            <div id="tabs-3" class="chatlog">
             </div>
             <div id="tabs-4">
                 こんてんつ４
